@@ -1,4 +1,4 @@
-package jar;
+package com.db.edu;
 
 import static org.junit.Assert.assertTrue;
 
