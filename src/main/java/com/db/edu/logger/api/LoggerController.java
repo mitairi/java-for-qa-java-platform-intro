@@ -1,5 +1,6 @@
 package com.db.edu.logger.api;
 
+import com.db.edu.logger.businesslogic.service.LogService;
 import com.db.edu.logger.dal.ConsoleLoggerSaver;
 
 /**
@@ -12,6 +13,14 @@ import com.db.edu.logger.dal.ConsoleLoggerSaver;
  * - other Aspects
  */
 public class LoggerController {
+    private LogService logService = new LogService();
+
+    public void log(String message) {
+        logService.log(message);
+    }
+
+
+/*
     private ConsoleLoggerSaver saver = new ConsoleLoggerSaver();
 
        /**
@@ -23,7 +32,9 @@ public class LoggerController {
        @Transactional()
        @WebMethod("/url")
        */
+       /*
        public void log(String message) {
           saver.save(message);
        }
+       */
 }
